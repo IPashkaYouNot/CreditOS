@@ -1,6 +1,20 @@
-read first_num
-read second_num
+echo "Enter numerator:"
+read first_num          # ввод числителя
 
-rez=$(echo "scale=3; $first_num/$second_num" | bc)
+echo "Enter denominator:"
+read second_num         # ввод знаменателя
 
-echo $rez
+echo "Enter precision:"
+read users_precision    # ввод точности после запятой
+
+if [[ $second_num = 0 ]]; then    # проверка достоверности данных
+
+  echo "The wrong denominator was typed"
+
+else
+
+  rez=$(echo "scale=$users_precision; $first_num/$second_num" | bc)   # использование базового калькулятора Линукса
+
+  echo "The result of determination is: "$rez    # вывод результата деления
+  
+fi
