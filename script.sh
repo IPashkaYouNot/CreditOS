@@ -13,8 +13,8 @@ if [[ $second_num = 0 ]]; then    # проверка достоверности 
 
 else
 
-  rez=$(echo "scale=$users_precision; $first_num/$second_num" | bc)   # использование базового калькулятора Линукса
+  rez=$(echo "scale=$users_precision; $first_num/$second_num" | bc  | sed -e 's/^\./0./' -e 's/^-\./-0./' )   # использование базового калькулятора Линукса
 
   echo "The result of determination is: "$rez    # вывод результата деления
-  
+
 fi
