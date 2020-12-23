@@ -1,14 +1,13 @@
-# Created by https://www.toptal.com/developers/gitignore/api/basic
-# Edit at https://www.toptal.com/developers/gitignore?templates=basic
 
-### Basic ###
-# Apples Build
-*.build
-*.apples
+# Created by https://www.toptal.com/developers/gitignore/api/powershell
+# Edit at https://www.toptal.com/developers/gitignore?templates=powershell
 
-# Initialized files
+### PowerShell ###
+# Exclude packaged modules
+*.zip
+
+# Exclude .NET assemblies from source
+*.dll
 *.exe
-*.ini
-*.basic
 
-# End of https://www.toptal.com/developers/gitignore/api/basic
+# End of https://www.toptal.com/developers/gitignore/api/powershell
